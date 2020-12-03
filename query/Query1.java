@@ -15,9 +15,9 @@ public class Query1 {
 		+ "Hometown varchar(255) NOT NULL, " + "Job varchar(255) NOT NULL, " + "MagicClass int NOT NULL," + "MagicAttribute  varchar(255) NOT NULL , " + "ManaCount int NOT NULL , " + "Money int NOT NULL );";
 		
 		String insert_value_single =
-				"Insert into magician_information(MagicianID,Password,MagicianName,Age,Tribe,Hometown,Job,MagicClass,MagicAttribute,ManaCount,Money) values (3000, '1q2w3e4r', 'ÂùÀÏ_Àü', 112, 'ÇÏÇÁ¿¤ÇÁ', '³×¹öÀ©ÅÍ', 'µ¥ÀÌÅÍº£ÀÌ½º°ü¸®ÀÚ', 10, 'È­¿°', 1250236, 12315462 )";
+				"Insert into magician_information(MagicianID,Password,MagicianName,Age,Tribe,Hometown,Job,MagicClass,MagicAttribute,ManaCount,Money) values (3000, '1q2w3e4r', 'ì°¬ì¼_ì „', 112, 'í•˜í”„ì—˜í”„', 'ë„¤ë²„ìœˆí„°', 'ë°ì´í„°ë² ì´ìŠ¤ê´€ë¦¬ì', 10, 'í™”ì—¼', 1250236, 12315462 )";
 
-		// Å×ÀÌºí Insert 
+		// í…Œì´ë¸” Insert 
 		String insert_value_statement = 
 			"Insert into magician_information(Password,MagicianName,Age,Tribe,Hometown,Job,MagicClass,MagicAttribute,ManaCount,Money) values (?,?,?,?,?,?,?,?,?,?)";
 
@@ -40,16 +40,16 @@ public class Query1 {
 
 			preStmt = conn. prepareStatement(insert_value_statement);
 
-			// Å×ÀÌºí ½Ç µ¥ÀÌÅÍ
+			// í…Œì´ë¸” ì‹¤ ë°ì´í„°
 			// String [] MagicID = { "Fire001", "Fire002","Fire003","Fire004", "Ice001", "Ice002", "earth001", "earth002" };
 			String [] Password = { "a1b2c3d4", "1q2w3e4r", "1q2w3e4r!", "abcedf1122", "bico1230", "imoen0092", "ed10048282", "dorai2003", "lassad8282", "n110029aa" };
-			String [] MagicianName = { "¿¤¹Î½ºÅÍ", "µå¸®ÁîÆ®µµ¾îµ§", "¹Î½ºÅ©", "ÀÚÇìÀÌ¶ó", "ºñÄÚ´Ï¾Æ", "ÀÌ¸ğ¿£", "¿¡µåÀ©", "µµ¸¥ÀÏ-Ä­", "¶ó»çµå", "´Ï¶ó" };
+			String [] MagicianName = { "ì—˜ë¯¼ìŠ¤í„°", "ë“œë¦¬ì¦ˆíŠ¸ë„ì–´ë´", "ë¯¼ìŠ¤í¬", "ìí—¤ì´ë¼", "ë¹„ì½”ë‹ˆì•„", "ì´ëª¨ì—”", "ì—ë“œìœˆ", "ë„ë¥¸ì¼-ì¹¸", "ë¼ì‚¬ë“œ", "ë‹ˆë¼" };
 			int [] Age = { 1021, 2135, 34, 702, 230, 23, 61, 102, 43, 443  };
-			String [] Tribe = { "ÀÎ°£", "µå·Î¿ì", "ÀÎ°£", "ÇÏÇÁ¿¤ÇÁ", "µå·Î¿ì", "ÀÎ°£", "ÀÎ°£", "ÇÏÇÁ¿ÀÅ©", "ÀÎ°£", "ÇÏÇÁ¿¤ÇÁ" };
-			String [] Hometown = { "¼¨µµ¿ìµ¥ÀÏ", "¼¨µµ¿ìµ¥ÀÏ", "¼ÒµåÄÚ½ºÆ®", "Å×µğ¸£", "¾ğ´õ´ÙÅ©", "¼ÒµåÄÚ½ºÆ®", "³ª½¬ÄÌ", "¼ÒµåÄÚ½ºÆ®", "³ª½¬ÄÌ", "º£·¹°í½ºÆ®"  };
-			String [] Job = { "¸¶¹ıÀÇÈ¸ Àå·Î", "¸ğÇè°¡", "±¤Àü»ç", "µå·çÀÌµå", "Å¬·¹¸¯", "¾¾ÇÁ", "ÇØ°á»ç", "ÆÈ¶óµò", "¼±¼Ò¿ï¸ùÅ©", "¿ÍÀÏµå¸ŞÀÌÁö" };
+			String [] Tribe = { "ì¸ê°„", "ë“œë¡œìš°", "ì¸ê°„", "í•˜í”„ì—˜í”„", "ë“œë¡œìš°", "ì¸ê°„", "ì¸ê°„", "í•˜í”„ì˜¤í¬", "ì¸ê°„", "í•˜í”„ì—˜í”„" };
+			String [] Hometown = { "ì„€ë„ìš°ë°ì¼", "ì„€ë„ìš°ë°ì¼", "ì†Œë“œì½”ìŠ¤íŠ¸", "í…Œë””ë¥´", "ì–¸ë”ë‹¤í¬", "ì†Œë“œì½”ìŠ¤íŠ¸", "ë‚˜ì‰¬ì¼ˆ", "ì†Œë“œì½”ìŠ¤íŠ¸", "ë‚˜ì‰¬ì¼ˆ", "ë² ë ˆê³ ìŠ¤íŠ¸"  };
+			String [] Job = { "ë§ˆë²•ì˜íšŒ ì¥ë¡œ", "ëª¨í—˜ê°€", "ê´‘ì „ì‚¬", "ë“œë£¨ì´ë“œ", "í´ë ˆë¦­", "ì”¨í”„", "í•´ê²°ì‚¬", "íŒ”ë¼ë”˜", "ì„ ì†Œìš¸ëª½í¬", "ì™€ì¼ë“œë©”ì´ì§€" };
 			int [] MagicClass = { 10, 8, 1, 4, 5, 3, 7, 1, 1, 7 };
-			String [] MagicAttribute = { "´ëÁö", "¾ÏÈæ", "¿¡³ÊÁö", "³ª¹«", "¾ÏÈæ", "¿¡³ÊÁö", "È­¿°", "¿¡³ÊÁö", "¿¡³ÊÁö", "¾óÀ½" };
+			String [] MagicAttribute = { "ëŒ€ì§€", "ì•”í‘", "ì—ë„ˆì§€", "ë‚˜ë¬´", "ì•”í‘", "ì—ë„ˆì§€", "í™”ì—¼", "ì—ë„ˆì§€", "ì—ë„ˆì§€", "ì–¼ìŒ" };
 			int [] ManaCount = { 10000020, 1315321, 100, 333420, 410000, 43200, 1270000, 213, 99, 1281427 };
 			int [] Money = { 1365356, 9465352, 21320, 112300, 543232, 32100, 465613, 64650, 1200, 333120 };
 
@@ -69,7 +69,7 @@ public class Query1 {
 			}
 
 
-			System.out.println("¼º°ø");
+			System.out.println("ì„±ê³µ");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
