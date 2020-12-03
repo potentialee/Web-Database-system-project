@@ -13,9 +13,9 @@ public class Query4 {
 		+ "password varchar(255) NOT NULL, " + "customername varchar(255) NOT NULL, " + "age int NOT NULL, "+ "adress varchar(255) NOT NULL, " + "attribute varchar(255) NOT NULL," + "money int NOT NULL );";
 		
 		String insert_value_single =
-				"Insert into customer_information(customerID,password,customername,age,adress,attribute,money) values (9000,'teosjd2312','Å×¿Àµµ¶õ', 43 , '¼ÒµåÄÚ½ºÆ® °Å¸® 223', 'È­¿°', 31552 )";
+				"Insert into customer_information(customerID,password,customername,age,adress,attribute,money) values (9000,'teosjd2312','í…Œì˜¤ë„ë€', 43 , 'ì†Œë“œì½”ìŠ¤íŠ¸ ê±°ë¦¬ 223', 'í™”ì—¼', 31552 )";
 
-		// Å×ÀÌºí Insert 
+		// í…Œì´ë¸” Insert 
 		Statement stmt = null;
 		Connection conn = null;
 
@@ -33,7 +33,7 @@ public class Query4 {
 			stmt.executeUpdate(insert_value_single);
 
 
-			System.out.println("¼º°ø");
+			System.out.println("ì„±ê³µ");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
