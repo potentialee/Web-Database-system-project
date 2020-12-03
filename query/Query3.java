@@ -13,9 +13,9 @@ public class Query3 {
 		+ "password varchar(255) NOT NULL, " + "businessname varchar(255) NOT NULL, " + "adress varchar(255) NOT NULL, "+ "representative varchar(255) NOT NULL, " + "permissionclass int NOT NULL ," + "money int NOT NULL);";
 		
 		String insert_value_single =
-				"Insert into magicfirm_information(magicfirmID,password,businessname,adress,representative,permissionclass,money) values (7000,'lebache1023','¸£¹ÙÃ¼','¼¨µµ¿ìµ¥ÀÏ Á¦¿ÀÆú Áß¾ÓÃ»', '·¹ÀÌÆ° ÇÁ·ÎÇÁ', '10', 16513225 )";
+				"Insert into magicfirm_information(magicfirmID,password,businessname,adress,representative,permissionclass,money) values (7000,'lebache1023','ë¥´ë°”ì²´','ì„€ë„ìš°ë°ì¼ ì œì˜¤í´ ì¤‘ì•™ì²­', 'ë ˆì´íŠ¼ í”„ë¡œí”„', '10', 16513225 )";
 
-		// Å×ÀÌºí Insert 
+		// í…Œì´ë¸” Insert 
 		Statement stmt = null;
 		Connection conn = null;
 
@@ -33,7 +33,7 @@ public class Query3 {
 			stmt.executeUpdate(insert_value_single);
 
 
-			System.out.println("¼º°ø");
+			System.out.println("ì„±ê³µ");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
