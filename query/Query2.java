@@ -13,9 +13,9 @@ public class Query2 {
 		+ "ingredientname varchar(255) NOT NULL, " + "origin varchar(255) NOT NULL, " + "kinds varchar(255) NOT NULL, " + "price int NOT NULL);";
 		
 		String insert_value_single =
-				"Insert into ingredient_information(ingredientID,ingredientname,origin,kinds,price) values (5000,'ºÒÀÇ °áÁ¤','ÆçÇìÀÓ','Á¤¼ö', 4000 )";
+				"Insert into ingredient_information(ingredientID,ingredientname,origin,kinds,price) values (5000,'ë¶ˆì˜ ê²°ì •','í í—¤ì„','ì •ìˆ˜', 4000 )";
 
-		// Å×ÀÌºí Insert 
+		// í…Œì´ë¸” Insert 
 		Statement stmt = null;
 		Connection conn = null;
 
@@ -33,7 +33,7 @@ public class Query2 {
 			stmt.executeUpdate(insert_value_single);
 
 
-			System.out.println("¼º°ø");
+			System.out.println("ì„±ê³µ");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
