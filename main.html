@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="마법세계의 데이터베이스 접속 페이지">
+	<meta name="keywords" content="마법, 데이터베이스">
+	<link rel="stylesheet" type="text/css" href="style_main.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/animate.css" media="all">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js" integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P" crossorigin="anonymous"></script>
+	 
+	<title>로도스 플레임 왕국 데이터 베이스 페이지</title>
+</head>
+<body>
+	<div class="container">
+
+		<!-- 타이틀 부분 시작 -->
+		<div id="title_part">
+			<h1><strong>로도스의 플레임 왕국 </strong><span class="badge badge-secondary">데이터베이스 시스템</span></h1>
+			<hr class="my-4">
+		</div>
+		<!-- 타이틀 부분 끝 -->
+
+		<div class="alert alert-warning alert-dismissible fade show animated bounceInRight" role="alert" id="alert_part" >
+			<strong> 각각 마법사, 상회, 고객으로서 부여받은 ID와 협회에 등록한 패스워드로 로그인하세요. </strong>
+  			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    			<span aria-hidden="true">&times;</span>
+ 			</button> 
+		</div>
+
+		<!-- 가입 경로 전환 내비게이터 시작 -->
+		<div id="nav_change">
+			<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+			  <li class="nav-item">
+			    <a class="nav-link active" id="pills-magician-tab" data-toggle="pill" href="#pills-magician" role="tab" aria-controls="pills-magician" aria-selected="true">마법사</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" id="pills-firm-tab" data-toggle="pill" href="#pills-firm" role="tab" aria-controls="pills-firm" aria-selected="false">상회 관리자</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" id="pills-customer-tab" data-toggle="pill" href="#pills-customer" role="tab" aria-controls="pills-customer" aria-selected="false">고객</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" id="pills-admin-tab" data-toggle="pill" href="#pills-admin" role="tab" aria-controls="pills-admin" aria-selected="false">DB 관리자</a>
+			  </li>
+			  
+			</ul>
+		</div>
+		<!-- 가입 경로 전환 내비게이터 끝 -->
+
+		<!-- 내비게이터 내용 시작 -->
+		<div class="tab-content" id="pills-tabContent">
+			<!-- 첫 번째 내비게이트 내용 시작-->
+			<div class="tab-pane fade show active" id="pills-magician" role="tabpanel" aria-labelledby="pills-magician-tab">
+
+			  	<!-- 마법사ID로 로그인하는 폼 시작-->
+			  	<div class="p-3 mb-2 bg-light text-dark rounded border" id="form_wrap">
+					<form id="login_form" action="magician_login_result.jsp" method="post">
+						<div class="form-group">
+							<label> <strong>아이디</strong>  </label> <input type="number" class="form-control" name="id_info" min="3000" max="4999"  placeholder="아이디를 입력하세요" style="-moz-appearance:textfield;" required>
+						</div>
+						<div class="form-group">
+							<label> <strong>패스워드</strong></label> <input type="password" class="form-control" name="password_info" placeholder="패스워드를 입력하세요." required>
+						</div>
+						<div id="submit_button">
+							<button type="submit" class="btn btn-primary"> 로그인 </button>
+						</div>
+					</form>		
+				</div>
+				<!-- 마법사ID로 로그인하는 폼 끝-->
+
+				<!-- 마법사 정보 등록 신청 버튼 -->
+				<div id="register_button">
+					<button type="submit" class="btn btn-primary btn-lg btn-block" onclick="location.href='magician_register.jsp'">마법사 정보 등록</button>
+				</div>
+
+			</div>
+			<!-- 첫 번째 내비게이트 내용 끝-->
+
+		  <!-- 두 번째 내비게이트 내용 시작-->
+		  <div class="tab-pane fade" id="pills-firm" role="tabpanel" aria-labelledby="pills-firm-tab">
+
+		  		<!-- 상회ID로 로그인하는 폼 시작-->
+			  	<div class="p-3 mb-2 bg-light text-dark rounded border" id="form_wrap">
+					<form id="login_form" action="firm_login_result.jsp" method="post">
+						<div class="form-group">
+							<label> <strong>아이디</strong>  </label> <input type="number" class="form-control" name="firm_id" min="7000" max="8999" placeholder="아이디를 입력하세요" style="-moz-appearance:textfield;" required>
+						</div>
+						<div class="form-group">
+							<label> <strong>패스워드</strong></label> <input type="password" class="form-control" name="firm_password" placeholder="패스워드를 입력하세요." required>
+						</div>
+						<div id="submit_button">
+							<button type="submit" class="btn btn-primary"> 로그인 </button>
+						</div>
+					</form>		
+				</div>
+				<!-- 상회ID로 로그인하는 폼 끝-->
+
+				<!-- 상회 등록 신청 버튼  -->
+				<div id="register_button">
+					<button type="submit" class="btn btn-primary btn-lg btn-block" onclick="location.href='firm_register.jsp'"> 마법 상회 창설 / 정보 등록 </button>
+				</div>
+		  </div>
+		  <!-- 두 번째 내비게이트 내용 시작-->
+
+		  <!-- 세 번째 내비게이트 내용 시작-->
+		  <div class="tab-pane fade" id="pills-customer" role="tabpanel" aria-labelledby="pills-customer-tab">
+
+		  		<!-- 고객 ID로 로그인하는 폼-->
+			  	<div class="p-3 mb-2 bg-light text-dark rounded border" id="form_wrap">
+					<form id="login_form" action="customer_login_result.jsp" method="post">
+						<div class="form-group">
+							<label> <strong>아이디</strong>  </label> <input type="number" class="form-control" name="customer_id" min="9000" max="9999" placeholder="아이디를 입력하세요" style="-moz-appearance:textfield;" required>
+						</div>
+						<div class="form-group">
+							<label> <strong>패스워드</strong></label> <input type="password" class="form-control" name="customer_password" placeholder="패스워드를 입력하세요." required>
+						</div>
+						<div id="submit_button">
+							<button type="submit" class="btn btn-primary"> 로그인 </button>
+						</div>
+					</form>		
+				</div>
+				<!-- 고객 ID로 로그인하는 폼 끝-->
+
+				<!-- 고객 등록 신청 버튼 -->
+				<div id="register_button">
+					<button type="submit" class="btn btn-primary btn-lg btn-block" onclick="location.href='customer_register.jsp'"> 고객 정보 등록 </button>
+				</div>
+		  </div>
+		  <!-- 세 번째 내비게이트 내용 끝-->
+
+		  <!-- 네 번째 내비게이트 내용 시작-->
+		  <div class="tab-pane fade" id="pills-admin" role="tabpanel" aria-labelledby="pills-admin-tab">
+
+		  		<!-- 관리자 ID로 로그인하는 폼-->
+			  	<div class="p-3 mb-2 bg-light text-dark rounded border" id="form_wrap">
+					<form id="login_form" action="admin_login_result.jsp" method="get">
+						<div class="form-group">
+							<label> <strong>아이디</strong>  </label> <input type="text" class="form-control" name="admin_id" placeholder="아이디를 입력하세요" required>
+						</div>
+						<div class="form-group">
+							<label> <strong>패스워드</strong></label> <input type="password" class="form-control" name="customer_password" placeholder="패스워드를 입력하세요." required>
+						</div>
+						<div id="submit_button">
+							<button type="submit" class="btn btn-primary"> 로그인 </button>
+						</div>
+					</form>		
+				</div>
+				<!-- 관리자 ID로 로그인하는 폼 끝-->
+
+		  </div>
+		  <!-- 네 번째 내비게이트 내용 끝-->
+
+		</div>
+		<!-- 내비게이터 내용 끝 -->
+		
+	</div>
+</body>
+</html>

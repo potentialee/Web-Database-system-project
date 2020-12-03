@@ -1,0 +1,19 @@
+body {
+	 background:url(img/background.png) no-repeat center center fixed rgba(255,0,0,0.5);
+}
+#title_part {
+	margin: 60px auto;
+}
+h1{
+	font-size: 200%;
+	text-align: center;
+}
+
+#content_wrap{
+	width: 1024px;
+	margin: 20px auto;
+}
+
+#login_result {
+	margin: 10px auto;
+}

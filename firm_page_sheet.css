@@ -1,0 +1,80 @@
+body {
+	 background:url(img/background.png) no-repeat center center fixed rgba(255,0,0,0.5);
+}
+
+#title_part {
+	margin: 60px auto;
+}
+h1{
+	font-size: 200%;
+	text-align: center;
+}
+
+#content_wrap{
+	width: 1000px;
+	margin: 20px auto;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#magicfirm_info_nav{
+	width: 100%;
+	float: left;
+	margin-bottom: 30px;
+}
+
+#magicfirm_img{
+	float: left;
+	width: 40%;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+#magicfirm_info_table {
+	float: right;
+	width: 50%;
+	margin-right: 40px;
+}
+
+#magicfirm_info_nav2 {
+	float: left;
+	width: 100%;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+
+#firm_info_edit_card{
+	float: left;
+	width: 25%;
+	margin-right: 25px;
+}
+
+.search_block {
+	margin-bottom: 20px;
+}
+
+.magician_input {
+	width: 40px;
+}
+
+#ingredid_input {
+	width: 40px;
+}
+
+#price_input{
+	width: 60px;
+}
+
+#ingredient_buy_amount{
+	width: 120px;
+}
+
+
+#loginout_part {
+	margin-top : 10px;
+	margin-left : 875px;
+}

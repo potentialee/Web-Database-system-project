@@ -1,0 +1,86 @@
+body {
+	 background:url(img/background.png) no-repeat center center fixed rgba(255,0,0,0.5);
+}
+
+#title_part {
+	margin: 60px auto;
+}
+h1{
+	font-size: 200%;
+	text-align: center;
+}
+
+#content_wrap{
+	width: 1000px;
+	margin: 20px auto;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#customer_info_nav{
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+}
+
+#customer_img{
+	float: left;
+	width: 20%;
+	margin-left: 120px;
+}
+
+#customer_info_table {
+	float: right;
+	width: 50%;
+	margin-right: 40px;
+	margin-top: 20px;
+}
+
+#customer_info_nav2 {
+	float: left;
+	width: 100%;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+
+#customer_info_edit_card{
+	float: left;
+	width: 25%;
+	margin-right: 25px;
+}
+
+.search_block {
+	margin-bottom: 20px;
+}
+
+.magicfirmid_input {
+	width: 40px;
+}
+
+.magic_input {
+	width: 40px;
+}
+.ingredient_input {
+	width: 70px;
+}
+
+.sellingprice_input {
+	width: 80px;
+}
+
+#magic_buy_amount{
+	width: 80px;
+}
+
+#ingredient_buy_amount{
+	width: 80px;
+}
+
+#loginout_part {
+	margin-top : 10px;
+	margin-left : 875px;
+}

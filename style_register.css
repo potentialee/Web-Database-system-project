@@ -1,0 +1,28 @@
+body {
+	 background:url(img/background.png) no-repeat center center fixed rgba(255,0,0,0.5);
+}
+
+#title_part {
+	margin: 60px auto;
+}
+h1{
+	font-size: 200%;
+	text-align: center;
+}
+
+#content_wrap{
+	width: 800px;
+	margin: 20px auto;
+}
+
+#gbbutton {
+	margin-top: 10px;
+}
+
+#last_form{
+	margin-bottom: 50px;
+}
+
+.buttonmargin{
+	margin-top: 50px;
+}
