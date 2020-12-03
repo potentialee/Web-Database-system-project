@@ -15,9 +15,9 @@ public class Query {
 		+ "MagicType varchar(255) NOT NULL, " + "EffectiveDose int NOT NULL, " + "ManaConsume int NOT NULL," + "SellingPrice int NOT NULL, " + "MagicEffect varchar(255) NOT NULL," + "CreaterID int NOT NULL," + "foreign key(CreaterID) references magician_information(magicianid) on update cascade );";
 		
 		String insert_value_single =
-				"Insert into magic_information(MagicID,MagicName,MagicExplanation,MagicClass,MagicAttribute,MagicType,EffectiveDose,ManaConsume,SellingPrice,MagicEffect,CreaterID) values (1000,'¿¡³ÊÁö È­»ì','¼ø¼ö ¿¡³ÊÁö¸¦ ¹ß»çÇÑ´Ù.',1,'¿¡³ÊÁö','°ø°İ',20,21,250,'·£´ı',3001)";
+				"Insert into magic_information(MagicID,MagicName,MagicExplanation,MagicClass,MagicAttribute,MagicType,EffectiveDose,ManaConsume,SellingPrice,MagicEffect,CreaterID) values (1000,'ì—ë„ˆì§€ í™”ì‚´','ìˆœìˆ˜ ì—ë„ˆì§€ë¥¼ ë°œì‚¬í•œë‹¤.',1,'ì—ë„ˆì§€','ê³µê²©',20,21,250,'ëœë¤',3001)";
 
-		// Å×ÀÌºí Insert 
+		// í…Œì´ë¸” Insert 
 		String insert_value_statement = 
 			"Insert into magic_information(MagicName,MagicExplanation,MagicClass,MagicAttribute,MagicType,EffectiveDose,ManaConsume,SellingPrice,MagicEffect, CreaterID) values (?,?,?,?,?,?,?,?,?,?)";
 
@@ -40,18 +40,18 @@ public class Query {
 
 			preStmt = conn. prepareStatement(insert_value_statement);
 
-			// Å×ÀÌºí ½Ç µ¥ÀÌÅÍ
+			// í…Œì´ë¸” ì‹¤ ë°ì´í„°
 			// String [] MagicID = { "Fire001", "Fire002","Fire003","Fire004", "Ice001", "Ice002", "earth001", "earth002" };
-			String [] MagicName = { "È­¿°±¸", "È­¿°º®", "È­¿°È­»ì", "È­¿°ÆøÇ³", "¾óÀ½È­»ì", "¾óÀ½ÆøÇ³", "ÁöÁø", "¾Ï¼®È­»ì" };
-			String [] MagicExplanation = { "È­¿°±¸¸¦ ¹ß»ç", "10¹ÌÅÍ Å©±â È­¿°º® »ı¼º", "ÁöÁ¤ÇÑ °÷¿¡ È­¿°È­»ì ¹ß»ç", 
-			"È­¿°À¸·Î ÀÌ·ç¾îÁø ÆøÇ³ »ı¼º", "ÁöÁ¤ÇÑ °÷¿¡ ¾óÀ½È­»ì ¹ß»ç", "³Ã±â °¡µæÇÑ ÆøÇ³ »ı¼º", "ÁöÁøÀ» ÀÏÀ¸Å´", "¾Ï¼®À¸·Î µÈ È­»ì ¹ß»ç" };
+			String [] MagicName = { "í™”ì—¼êµ¬", "í™”ì—¼ë²½", "í™”ì—¼í™”ì‚´", "í™”ì—¼í­í’", "ì–¼ìŒí™”ì‚´", "ì–¼ìŒí­í’", "ì§€ì§„", "ì•”ì„í™”ì‚´" };
+			String [] MagicExplanation = { "í™”ì—¼êµ¬ë¥¼ ë°œì‚¬", "10ë¯¸í„° í¬ê¸° í™”ì—¼ë²½ ìƒì„±", "ì§€ì •í•œ ê³³ì— í™”ì—¼í™”ì‚´ ë°œì‚¬", 
+			"í™”ì—¼ìœ¼ë¡œ ì´ë£¨ì–´ì§„ í­í’ ìƒì„±", "ì§€ì •í•œ ê³³ì— ì–¼ìŒí™”ì‚´ ë°œì‚¬", "ëƒ‰ê¸° ê°€ë“í•œ í­í’ ìƒì„±", "ì§€ì§„ì„ ì¼ìœ¼í‚´", "ì•”ì„ìœ¼ë¡œ ëœ í™”ì‚´ ë°œì‚¬" };
 			int [] MagicClass = { 3, 4, 2, 6, 2, 6, 3, 2 };
-			String [] MagicAttribute = { "ºÒ", "ºÒ", "ºÒ", "ºÒ", "¾óÀ½", "¾óÀ½", "¾óÀ½", "´ëÁö"};
-			String [] MagicType = { "°ø°İ", "¹æ¾î", "°ø°İ", "°ø°İ", "°ø°İ", "°ø°İ", "°ø°İ", "°ø°İ" };
+			String [] MagicAttribute = { "ë¶ˆ", "ë¶ˆ", "ë¶ˆ", "ë¶ˆ", "ì–¼ìŒ", "ì–¼ìŒ", "ì–¼ìŒ", "ëŒ€ì§€"};
+			String [] MagicType = { "ê³µê²©", "ë°©ì–´", "ê³µê²©", "ê³µê²©", "ê³µê²©", "ê³µê²©", "ê³µê²©", "ê³µê²©" };
 			int [] EffectiveDose = { 31, 45, 26, 66, 28, 69, 37, 26 };
 			int [] ManaConsume = { 35, 125, 24, 457, 24, 480, 41, 31 };
 			int [] SellingPrice = { 400, 670, 340, 1200, 380, 1270, 420, 370 };
-			String [] MagicEffect = { "È­»ó", "È­»ó", "È­»ó", "È­»ó", "µ¿»ó", "µ¿»ó", "ÃâÇ÷", "ÃâÇ÷" };
+			String [] MagicEffect = { "í™”ìƒ", "í™”ìƒ", "í™”ìƒ", "í™”ìƒ", "ë™ìƒ", "ë™ìƒ", "ì¶œí˜ˆ", "ì¶œí˜ˆ" };
 			int[] CreaterID = {3000,3000,3007,3007,3010,3010,3001,3001};
 
 			for (int i = 0; i < 8; i++) {
@@ -70,7 +70,7 @@ public class Query {
 			}
 
 
-			System.out.println("¼º°ø");
+			System.out.println("ì„±ê³µ");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
